@@ -21,6 +21,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
  */
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: './src/app.js',
@@ -59,5 +60,11 @@ module.exports = {
 		]
 	},
 
-	plugins: [new UglifyJSPlugin(), new ExtractTextPlugin('style.css')]
+	plugins: [new HtmlWebpackPlugin({
+			    title: 'Darkcaster',
+				filename: 'index.html',
+      			template: 'src/index.html'
+			  }),
+			  new UglifyJSPlugin(), 
+			  new ExtractTextPlugin('style.css')]
 };
