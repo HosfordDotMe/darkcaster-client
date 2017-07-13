@@ -1,15 +1,18 @@
-MainController.$inject = ['WeatherService'];
+CurrentWeatherController.$inject = ['WeatherService'];
 const clearDay = require('../../images/clear-day.png');
 const clearNight = require('../../images/clear-night.svg');
 
-function MainController(weather){
-    this.message = 'hello from angular';
+function CurrentWeatherController(weather){
+    this.lat = 0;
+    this.lon = 0;
     this.imageLookup = {
         'clear-day': clearDay,
         'clear-night': clearNight
     };
-    weather.getCurrentWeather(29,-81)
-           .then(currentWeather => this.weatherData = currentWeather);
+    this.search = function search(){
+        weather.getCurrentWeather(this.lat,this.lon)
+               .then(currentWeather => this.weatherData = currentWeather);
+    };
 };
 
-module.exports = MainController;
+module.exports = CurrentWeatherController;

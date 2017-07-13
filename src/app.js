@@ -4,12 +4,10 @@ const angular = require('angular');
 const WeatherService = require('./services/weather.service');
 
 //components
-const currentWeatherComponent = require('./components/current-weather/index');
+const currentWeatherComponent = require('./components/current-weather/');
 
 
 //create our application
-angular.module('darkcaster-client',[]); //setter syntax
-
-angular.module('darkcaster-client') //getter angular's version of require
+angular.module('darkcaster-client',[]) //setter syntax
        .factory('WeatherService', WeatherService)
        .component('currentWeather', currentWeatherComponent);
