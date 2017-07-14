@@ -1,4 +1,4 @@
-const weatherData = require('../../mocks/weather.json');
+//const weatherData = require('../../mocks/weather.json');
 WeatherService.$inject = ['$http'];
 
 function WeatherService ($http){
