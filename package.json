@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack --watch",
+    "dev": "webpack-dev-server",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "webpack": "^3.1.0"
   },
   "dependencies": {
-    "angular": "^1.6.5"
+    "angular": "^1.6.5",
+    "webpack-dev-server": "^2.6.1"
   }
 }
