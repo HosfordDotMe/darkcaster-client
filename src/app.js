@@ -14,6 +14,6 @@ const hourlyWeatherComponent = require('./components/hourly-weather');
 angular.module('darkcaster-client',[]) //setter syntax
        .factory('WeatherService', WeatherService)
        .factory('ImagesService', ImagesService)
-       .component('searchLocation', searchComponent)
+       .component('search', searchComponent)
        .component('currentWeather', currentWeatherComponent)
        .component('hourlyWeather', hourlyWeatherComponent);

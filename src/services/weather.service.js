@@ -6,7 +6,8 @@ function WeatherService ($http){
     return {
         //label : function name
         getCurrentWeather: getCurrently,
-        getHourlyWeather: getHourly
+        getHourlyWeather: getHourly,
+        getAll: getAll
     }
     function getCurrently(lat,lon){
         const url = `${baseUrl}${lat},${lon}`;
@@ -21,6 +22,11 @@ function WeatherService ($http){
                     .then(response => {
                         return response.data.hourly;
                     })
+    }
+    function getAll(lat,lon){
+        const url = `${baseUrl}${lat},${lon}`;
+        return $http.get(url)
+                    .then(response => response.data);
     }
 }
 
