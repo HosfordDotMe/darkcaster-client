@@ -1,7 +1,7 @@
 const template = require('./search.html');
 const controller = require('./search.controller');
 
-const searchComponent = {
+const component = {
     controller,
     template,
     bindings: {
@@ -9,4 +9,6 @@ const searchComponent = {
         lat: '=',
         lon: '='
     }
-}
+};
+
+module.exports = component;

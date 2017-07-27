@@ -8,9 +8,9 @@ const rain = require('../images/rain.svg');
 const sleet = require('../images/sleet.svg');		
 const snow = require('../images/snow.svg');
 
-ImagesService.$inject = [];
+ImageService.$inject = [];
 
-function ImagesService() {
+function ImageService() {
     const imageLookup = {
         'clear-day': clearDay,
         'clear-night': clearNight,		
@@ -27,4 +27,4 @@ function ImagesService() {
     }
 }
 
-module.exports = ImagesService;
+module.exports = ImageService;

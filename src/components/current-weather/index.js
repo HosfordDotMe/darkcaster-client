@@ -1,10 +1,13 @@
-const htmlTemplate = require('./current-weather.html');
-const currentController = require('./current-weather.controller');
+const template = require('./current-weather.html');
+const controller = require('./current-weather.controller');
 
-const currentWeatherComponent = {
-    template: htmlTemplate,
-    controller: currentController
+const component = {
+    template,
+    controller,
+    bindings: {
+        weather: '<'
+    }
 };
 
-module.exports = currentWeatherComponent;
+module.exports = component;
 

@@ -1,7 +1,7 @@
 const template = require('./main-app.html');
-const controller = require('/main-app.controller');
+const controller = require('./main-app.controller');
 
-const component {
+const component = {
     controller,
     template
 }
