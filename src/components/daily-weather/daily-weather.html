@@ -1,0 +1,16 @@
+<section class="card--main" ng-if="$ctrl.weather">
+    <h2>Weekly Forecast</h2>
+    <h3>{{ $ctrl.weather.summary }}</h3>
+    <div class="card">
+        <ul class="interval">
+            <li ng-repeat='daily in $ctrl.weather.data'>
+                <span class="day">{{ daily.time * 1000  | date:"shortDate" }}</span>
+                <span class="temp">{{ daily.temperatureMin | number:0 }}&deg;F/{{ daily.temperatureMax | number:0 }}&deg;F</span>
+                <img ng-src="{{$ctrl.imageLookup[daily.icon] || $ctrl.missingImage }}">
+                <div class="precipitation" ng-attr-style="height: {{daily.precipProbability * 100}}%">{{ daily.precipProbability * 100 | number:0 }}%</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- <pre>{{ $ctrl.weather | json }}</pre> -->
